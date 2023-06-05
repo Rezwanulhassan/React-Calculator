@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+The code imports the necessary modules from React and a CSS file.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+useState is a React hook used to manage state within a component.
+useRef is another React hook used to create a reference to a DOM element.
+The App function is the main component of the application.
 
-## Available Scripts
+Inside the App component, two useRef hooks are used to create references to HTML elements:
 
-In the project directory, you can run:
+inputRef is a reference to the input element where the user enters a number.
+resultRef is a reference to a paragraph element where the current result is displayed.
+The useState hook is used to create a state variable called result and its corresponding updater function setResult. The initial value of result is set to 0.
 
-### `npm start`
+Four functions are defined within the App component:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+plus: This function is called when the user clicks the "add" button. It takes the current value entered by the user, converts it to a number, and adds it to the current result value using the setResult function.
+minus: This function is similar to plus, but it subtracts the entered value from the current result value.
+times: This function multiplies the entered value with the current result value.
+divide: This function divides the current result value by the entered value.
+Two additional functions are defined:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+resetInput: This function is called when the user clicks the "reset input" button. It clears the value entered by setting the inputRef value to an empty string.
+resetResult: This function resets the result value to 0 when the user clicks the "reset result" button.
+The return statement contains the JSX code that defines the structure and elements of the calculator UI.
 
-### `npm test`
+The resultRef is used to display the current result value.
+The inputRef is used to capture user input.
+Buttons are added for each operation and the reset functions.
+Regarding the issue with the buttons not working as desired, it's difficult to pinpoint the exact problem without more information. However, here are a few common reasons why the buttons may not be working:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure that all button click handlers (onClick attributes) are correctly assigned to the corresponding functions (plus, minus, times, divide, resetInput, resetResult).
 
-### `npm run build`
+Check if there are any error messages in the browser's console that could indicate issues with the code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Verify that the required dependencies (React and other related libraries) are correctly installed and up to date.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ensure that the code is being executed within a valid React application setup, including proper rendering of the App component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
