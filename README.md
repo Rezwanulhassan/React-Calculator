@@ -36,5 +36,3 @@ Verify that the required dependencies (React and other related libraries) are co
 Ensure that the code is being executed within a valid React application setup, including proper rendering of the App component.
 
 
-
-
