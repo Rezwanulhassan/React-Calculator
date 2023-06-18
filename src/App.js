@@ -25,7 +25,7 @@ function App() {
   };
  
   function times(e) {                                                                                                                                                               
-    // mutiplying 
+    // mutiplying test 
     e.preventDefault();
     setResult((result) => result * Number(inputRef.current.value));
   }; 
